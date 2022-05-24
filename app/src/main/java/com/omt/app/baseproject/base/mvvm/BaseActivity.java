@@ -1,33 +1,26 @@
-package com.omt.app.baseproject.base.ui;
+package com.omt.app.baseproject.base.mvvm;
 
 import android.Manifest;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewbinding.ViewBinding;
 
 import com.karumi.dexter.Dexter;
-import com.karumi.dexter.MultiplePermissionsReport;
-import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 
-import java.util.List;
+import dagger.android.support.DaggerAppCompatActivity;
 
-import dagger.android.AndroidInjection;
-import dagger.android.DaggerActivity;
+public abstract class BaseActivity<VB extends ViewBinding, VM extends BaseViewModel> extends DaggerAppCompatActivity {
 
-public abstract class BaseActivity<B extends ViewBinding> extends AppCompatActivity {
-
-    protected B binding;
+    protected VB binding;
+    protected VM viewModel;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        AndroidInjection.inject(this);
-
+        viewModel = createViewModel();
         setupViews();
         bindViews();
     }
@@ -49,7 +42,9 @@ public abstract class BaseActivity<B extends ViewBinding> extends AppCompatActiv
                 .check();
     }
 
-    protected abstract B getViewBinding();
+    protected abstract VB getViewBinding();
+
+    protected abstract VM createViewModel();
 
     protected abstract void bindViews();
 
