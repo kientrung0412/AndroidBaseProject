@@ -9,14 +9,11 @@ import com.omt.app.baseproject.data.remote.ApiHelper;
 import com.omt.app.baseproject.ui.home.HomeActivity;
 import com.omt.app.baseproject.ui.home.HomeViewModel;
 
+import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
 
 @Module
 public abstract class ViewModelModule {
-    @Provides
-    ViewModelProvider.Factory provideViewModelProvider(HomeViewModel viewModel) {
-        return  ViewModelProvider.Factory
-    }
 
 }
