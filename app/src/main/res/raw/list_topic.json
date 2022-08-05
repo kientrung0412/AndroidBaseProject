@@ -1,0 +1,44 @@
+[
+   {
+      "id":1,
+      "title":"Công việc cá nhân",
+      "totalTaskOpen":4,
+      "totalTaskDone":50,
+      "totalTaskClose":4
+   },
+   {
+      "id":2,
+      "title":"Design",
+      "totalTaskOpen":47,
+      "totalTaskDone":91,
+      "totalTaskClose":88
+   },
+   {
+      "id":3,
+      "title":"API",
+      "totalTaskOpen":2,
+      "totalTaskDone":66,
+      "totalTaskClose":4
+   },
+   {
+      "id":4,
+      "title":"Kidsonline",
+      "totalTaskOpen":77,
+      "totalTaskDone":47,
+      "totalTaskClose":47
+   },
+   {
+      "id":5,
+      "title":"SchoolOnline",
+      "totalTaskOpen":31,
+      "totalTaskDone":81,
+      "totalTaskClose":86
+   },
+   {
+      "id":6,
+      "title":"CenterOnline",
+      "totalTaskOpen":18,
+      "totalTaskDone":98,
+      "totalTaskClose":75
+   }
+]

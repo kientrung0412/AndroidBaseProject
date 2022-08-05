@@ -1,6 +1,7 @@
 package com.omt.app.baseproject;
 
 import android.content.Context;
+import android.widget.Toast;
 
 
 import androidx.multidex.MultiDex;
@@ -12,6 +13,7 @@ import javax.inject.Singleton;
 
 import dagger.android.AndroidInjector;
 import dagger.android.support.DaggerApplication;
+import io.realm.Realm;
 
 
 @Singleton
@@ -26,6 +28,7 @@ public class MyApplication extends DaggerApplication {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(this);
+        Realm.init(this);
     }
 
     @Override

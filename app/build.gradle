@@ -1,13 +1,16 @@
 plugins {
     id 'com.android.application'
+//    id 'kotlin-android'
 }
+
+apply plugin: "realm-android"
 
 android {
     compileSdk 32
 
     defaultConfig {
         applicationId "com.omt.app.baseproject"
-        minSdk 22
+        minSdk 24
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -32,11 +35,8 @@ android {
 }
 
 dependencies {
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
-
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation "androidx.multidex:multidex:2.0.1"
 
@@ -60,6 +60,12 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
 
     implementation 'com.karumi:dexter:6.2.3'
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.6.21'
+
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.github.GrenderG:Toasty:1.5.2'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

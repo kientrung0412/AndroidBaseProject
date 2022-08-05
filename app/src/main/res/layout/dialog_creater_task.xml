@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/tv_title_dialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/iv_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_close_24" />
+
+    <TextView
+        android:id="@+id/tv_name_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbarTrackVertical="@id/tv_title_dialog"
+        android:text="Tên task: "
+        android:textColor="@color/textDefault"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_name_task"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edit_name_task" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_name_task"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_name_task"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_dialog" />
+
+    <TextView
+        android:id="@+id/tv_describe_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbarTrackVertical="@id/tv_title_dialog"
+        android:text="Mô tả: "
+        android:textColor="@color/textDefault"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_describe_task"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edit_describe_task" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_describe_task"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_circle"
+        android:gravity="start"
+        android:lines="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_name_task"
+        app:layout_constraintTop_toBottomOf="@+id/edit_name_task" />
+
+    <TextView
+        android:id="@+id/tv_date_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbarTrackVertical="@id/tv_title_dialog"
+        android:text="Ngày hoàn thành"
+        android:textColor="@color/textDefault"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_date_task_select"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_date_task_select" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_date_task_select"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_circle"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_date_task"
+        app:layout_constraintTop_toBottomOf="@+id/edit_describe_task" />
+
+    <TextView
+        android:id="@+id/tv_topic_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbarTrackVertical="@id/tv_title_dialog"
+        android:text="Chủ đề"
+        android:textColor="@color/textDefault"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_topic_task"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinner_topic_task" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner_topic_task"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_circle"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_date_task"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date_task_select" />
+
+
+    <Button
+        android:id="@+id/btn_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Xác nhận"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_topic_task" />
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="#8F8F8F"
+        android:text="Hủy"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_yes"
+        app:layout_constraintEnd_toStartOf="@+id/btn_yes"
+        app:layout_constraintTop_toTopOf="@+id/btn_yes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
